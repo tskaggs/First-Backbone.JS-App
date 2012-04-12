@@ -2,27 +2,22 @@
 (function ($) {
 
 ////////////////////////The data//////////////////////
-    //Array of contacts*/
+    //Array of things*/
     var contacts = [
-        { name: "Contact 1", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "family" },
-        { name: "Contact 2", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "family" },
-        { name: "Contact 3", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "friend" },
-        { name: "Contact 4", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "colleague" },
-        { name: "Contact 5", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "family" },
-        { name: "Contact 6", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "colleague" },
-        { name: "Contact 7", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "friend" },
-        { name: "Contact 8", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "family" }
+        { first_name: "Bob", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", product: "gloves", number: "IH932823h", amount: "15", price: "$10.99", type: "clothing" },
+        { first_name: "Karrie", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", product: "gloves", number: "IH932823h", amount: "15", price: "$10.99", type: "hats" },
+        { first_name: "James", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", product: "gloves", number: "IH932823h", amount: "15", price: "$10.99", type: "hats" },
+        { first_name: "Eric", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", product: "gloves", number: "IH932823h", amount: "15", price: "$10.99", type: "socks" },
+        { first_name: "Jeb", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", product: "gloves", number: "IH932823h", amount: "15", price: "$10.99", type: "animal" },
+        { first_name: "Tim", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", product: "gloves", number: "IH932823h", amount: "15", price: "$10.99", type: "clothing" },
+        { first_name: "Mark", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", product: "gloves", number: "IH932823h", amount: "15", price: "$10.99", type: "socks" },
+        { first_name: "April", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", product: "gloves", number: "IH932823h", amount: "15", price: "$10.99", type: "hats" }
     ];
+////////////////////////END the data//////////////////////
 
     //Create a model in Backbone just use Backbone.Model + .extend() method*/
     var Contact = Backbone.Model.extend({
-        //Property set with defaults object, sets default values for attributes*/
-        defaults: {
-                //The photo attribute will be given to all models that don't have one set*/
-                email2: "anemail@me.com"
-        }
     });
-////////////////////////END the data//////////////////////
 
 ////////////////////////The Setup for collection//////////////////////
     //Collection is a Backbone class, extend will allow set properties and add behaviors*/
@@ -36,7 +31,7 @@
     //View class of Backbone, */
     var ContactView = Backbone.View.extend({
         //tagName to specify the container for the view*/
-        tagName: "article",
+        tagName: "tr",
         //className specifies a class name add to container*/
         className: "contact-container",
         //template stores a cached reference to the template, use jQuery to select*/

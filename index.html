@@ -7,14 +7,28 @@
 		<link rel="stylesheet" type="text/css" href="css/screen.css">
 	</head>
 	<body>
-		<div id="contacts"></div>
+		<table id="contacts">
+			<tr>
+				<td>first_name</td>
+				<td>address</td>
+				<td>tel</td>
+				<td>type</td>
+				<td>product</td>
+				<td>number</td>
+				<td>amount</td>
+				<td>price</td>
+			</tr>
+		</tabe>
+	
 		<script id="contactTemplate" type="text/template">
-			<img src="<%= email2 %>" alt="<%= name %>" />
-			<h1><%= name %><span><%= type %></span></h1>
-			<div><%= address %></div>
-			<dl>
-				<dt>Tel:</dt><dd><%= tel %></dd>
-				<dt>Email:</dt><dd><a href="mailto:<%= email %>"><%= email %></a></dd>
+			<td><%= first_name %></td>
+			<td><%= address %></td>
+			<td><%= tel %></td>
+			<td><%= type %></td>
+			<td><%= product %></td>
+			<td><%= number %></td>
+			<td><%= amount %></td>
+			<td><%= price %></td>
 			</dl>
 		</script>
 		<script src="js/jQuery-min.js"></script>
